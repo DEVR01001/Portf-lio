@@ -58,7 +58,7 @@
 
 .navbar{
     display: flex;
-    width: 100%;
+    width: 100vw;
     height: 80px;
     position: fixed;
     animation: animation_navbar 0.8s ease;
@@ -122,10 +122,10 @@
 
 .home{
     display: flex;
-    width: 100%;
+    width: 99vw;
     height: 100vh;
-    object-fit: contain;
-    background-image: linear-gradient(to bottom, transparent 50%, #2b2b2b 100%), url(src/freepik-export-20241031001414zAHL.jpeg);
+    background-size: cover;
+    background-image: linear-gradient(to bottom, transparent 10%, #2b2b2b 100%), url(src/freepik-export-20241031001414zAHL.jpeg);
     position: relative;
     flex-direction: column;
     
@@ -336,7 +336,7 @@ button {
     row-gap: 2.5rem;
     justify-content: center;
     animation: cards 2s;
-    animation-timeline: view(block 100% 10%);
+    animation-timeline: view();
     align-self: center;
     
 
@@ -448,6 +448,13 @@ svg{
 
 
 
+
+.img-about{
+    display: flex;
+    width: 50%;
+}
+
+
 .content-sobre-mim{
     display: flex;
     position: relative;
@@ -455,39 +462,30 @@ svg{
     height: 100vh;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.ball{
-    width: 50px;
-    height: 50px;
-    background-color: var(--ice);
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    animation: zigzag 10s linear infinite alternate;
-    animation-fill-mode:forwards;
+.text-content-about{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    
 }
 
+.text-content-about h3{
+    display: flex;
+    font-size: 35px;
+    padding-bottom: 2rem;
+    color: var(--ice);
+    
+}
 
+.text-content-about p{
+    display: flex;
+    padding-bottom: 1rem;
+    width: 60%;
+    color: var(--ice);
+    text-align: justify;
+    
+}
 
 
 /* ANIMATION */
@@ -516,23 +514,6 @@ svg{
 
 
 
-@keyframes zigzag {
-    0% {
-      transform: translateX(500px) translateY(-300px);
-    }
-    25% {
-      transform: translateX(39px) translateY(280px);
-    }
-    50% {
-      transform: translateX(1260px) translateY(30px);
-    }
-    75% {
-      transform: translateX(35px) translateY(370px);
-    }
-    100% {
-      transform: translateX(1260px) translateY(590px);
-    }
-  }
 
 
 
@@ -565,13 +546,18 @@ svg{
 
 
 @keyframes cards{
-    from{
-        transform: scale(0.5);
+    0%{
+        transform: translateY(200px);
         opacity: 0;
     }
-    to{
-        transform: scale(1);
+    50%{
+        transform: translateY(0px);
         opacity: 1;
+    }
+    100%{
+        transform: translateY(-50px);
+        opacity: 1;
+
     }
 }
 
@@ -582,7 +568,7 @@ svg{
         transform: translateY( 0px);
     }
     to{
-        transform: translateY( 90vh);
+        transform: translateY( 80vh);
     }
 }
 
