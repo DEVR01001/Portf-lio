@@ -45,12 +45,15 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
 }
 
 
 .body{
     display: flex;
-    scroll-behavior: smooth;
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
 }
 
 /* NAVBAR */
@@ -59,7 +62,7 @@
 
 .navbar{
     display: flex;
-    width: 100vw;
+    width: 100%;
     height: 80px;
     position: fixed;
     animation: animation_navbar 0.8s ease;
@@ -123,7 +126,7 @@
 
 .home{
     display: flex;
-    width: 99vw;
+    width: 100%;
     height: 100vh;
     background-size: cover;
     background-image: linear-gradient(to bottom, transparent 10%, #2b2b2b 100%), url(src/freepik-export-20241031001414zAHL.jpeg);
@@ -425,8 +428,8 @@ svg{
 .works{
     display: flex;
     width: 100%;
-    height: 80vh;
-    background-color: var(--darkgrey);
+    height: 100vh;
+    background-color: #3d3d3d;
 
 
 }
@@ -446,6 +449,7 @@ svg{
     top: 0;
     left: 0;
     animation: teste 6s infinite; 
+    
 }
 
 /* SOBRE MIM*/
@@ -457,7 +461,6 @@ svg{
     height: 100vh;
     background-color: var(--darkgrey);
     flex-direction: column;
-
 }
 
 
@@ -468,6 +471,7 @@ svg{
     width: 50%;
     height: 100%;
     position: relative;
+    
 }
 
 .img-about img{
@@ -477,6 +481,7 @@ svg{
     top: 0;
     left: 0;
     background-color: red;
+    
 
 }
 
@@ -485,7 +490,10 @@ svg{
     display: flex;
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    
+    
+    
 }
 
 .text-content-about{
@@ -493,17 +501,20 @@ svg{
     flex-direction: column;
     width: 50%;
     justify-content: start;
-    padding-top: 6rem;
-    animation: animation_navbar 3s ease ;
-    animation-timeline: view(block 100% 10%);
+    padding-top: 4rem;
+
     
 }
 
 .text-content-about h3{
     display: flex;
     font-size: 35px;
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
     color: var(--ice);
+    width: 80%;
+    animation: sobreText 0.5s ease;
+    animation-timeline: view();
+
     
 }
 
@@ -513,12 +524,153 @@ svg{
     width: 60%;
     color: var(--ice);
     text-align: justify;
+    animation:  sobreText 0.2s ease;
+    animation-timeline: view();
+
+    
+
+  
+
     
 }
 
 
+.ghg{
+    display: flex;
+    animation-timeline: view();
+    animation:  animation_social_medias 2s ease;
+}
+
+
+
+
+/* FOOTER */
+
+
+footer{
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    background-color: #3d3d3d;
+    justify-content: center;
+    align-items: center;
+}
+
+.content_footer{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.item_contato{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+
+
+.item_contato input{
+    width: 500px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding-left: 2rem;
+    color: #2b2b2b;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    z-index: 5;
+}
+
+
+.link_email{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 13px;
+    border-radius: 5px;
+    background-color: #575757;
+    color: white;
+    font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    z-index: 5;
+}
+
+
+.link_email:hover{
+    transform: scale(1.05);
+}
+
+
+.img_paper{
+    display: flex;
+    position: absolute;
+    left: -75px;
+    top: -60px;
+    height: 100px;
+    rotate: 10deg;
+    z-index: 2;
+
+}
+
+
+.active_ani_paper{
+    animation: paper_link 5s ease-in-out ;
+    animation-timing-function: linear;
+
+}
+
+
+
+/* 
+.active_ani_paper */
+
+@keyframes paper_link {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+    20% {
+        transform: translateX(200px) rotate(20deg);
+    }
+    40%{
+        transform: translateX(500px) rotate(40deg);
+
+    }
+    60%{
+        transform: translateX(700px)  translateY(-10px) rotate(300deg);
+
+    }
+    80%{
+        transform: translateX(300px)  translateY(-200px) rotate(180deg);
+
+    }
+    100%{
+        transform: translateX(0px)   rotate(0deg);
+
+    }
+    
+}
+
 /* ANIMATION */
 
+@keyframes testeText{
+    to{
+        transform: translateX(0);
+
+    }
+    from{
+        transform: translateX(500px);
+
+    }
+
+}
 
 
 @keyframes zoom{
@@ -527,7 +679,7 @@ svg{
         opacity: 0;
     }
     50%{
-        translate: 0px 0;
+        translate: 0 0;
         opacity: 1;
     }
     100%{
@@ -615,4 +767,19 @@ svg{
         content: "Olá, Eu sou Design..." ;
     }
     
+}
+
+@keyframes sobreText {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+}
+
 }
