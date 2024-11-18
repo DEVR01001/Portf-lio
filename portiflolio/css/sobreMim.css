@@ -1,0 +1,160 @@
+
+/* SOBRE MIM*/
+
+
+.sobre-mim{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(10deg, var(--ice) 30%, transparent 30.1%);
+    flex-direction: column;
+    padding-top: 3rem;
+    position: relative;
+}
+
+/* SHAPE SOBRE MIM */
+
+.shape-sobrem-mim{
+    display: flex;
+    position: absolute;
+    width: 300px;
+    height: 90vh;
+    background-color: var(--ice);
+    top: 5rem;
+    border-radius:0px 0px 0px 0px ;
+}
+
+
+.btn-abount {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: var(--green);
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    width: 200px;
+    height: 45px;
+    margin-top: 1rem;
+    animation:  sobreText 0.2s ease;
+    animation-timeline: view();
+
+  }
+  
+  .btn-abount:after {
+    content: " ";
+    width: 0%;
+    height: 100%;
+    background: var(--ice);
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    right: 0;
+  }
+  
+  .btn-abount:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+  }
+  
+  .btn-abount span {
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 18px 25px;
+    color: var(--darkgrey);
+    font-size: 1.125em;
+    font-weight: 700;
+    z-index: 20;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn-abount:hover span {
+    color: var(--darkgrey);
+    animation: scaleUp 0.3s ease-in-out;
+  }
+  
+  @keyframes scaleUp {
+    0% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(0.95);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+   
+
+.img-about{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    
+}
+
+.img-about img{
+    display: flex;
+    position: absolute;
+    height: 800px;
+    top: 0;
+    left: 0;
+    background-color: red;
+    
+
+}
+
+
+.content-sobre-mim{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+    
+    
+}
+
+.text-content-about{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: start;
+    padding-top: 4rem;
+
+    
+}
+
+.text-content-about h3{
+    display: flex;
+    font-size: 35px;
+    padding-bottom: 4rem;
+    color: var(--ice);
+    width: 80%;
+    animation: sobreText 0.5s ease;
+    animation-timeline: view();
+
+    
+}
+
+.text-content-about p{
+    display: flex;
+    padding-bottom: 1rem;
+    width: 60%;
+    font-weight: 300;
+    color:var(--ice);
+    text-align: justify;
+    animation:  sobreText 0.2s ease;
+    animation-timeline: view();
+
+}
+

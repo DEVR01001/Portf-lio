@@ -1,0 +1,291 @@
+
+/* Video Background */
+.video_body{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.overlay{
+    /* background: linear-gradient(to top, #1C1C1C 20%, transparent 90%); */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+
+
+
+/* NAVBAR */
+
+
+
+
+.navbar{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    animation: animation_navbar 0.8s ease;
+    z-index: 1;
+
+    
+}
+
+.content-navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+    
+
+
+}
+
+
+.content-navbar ul{
+    display: flex;
+    column-gap: 50px;
+    list-style: none;
+    padding: 10px 40px;
+    border-radius: 9px;
+    justify-content: center;
+    position: fixed;
+
+}
+
+
+.content-navbar ul li a{
+    display: flex;
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: var(--ice);
+    font-weight: 500;
+    transition: all  0.3s ease;
+    text-transform:capitalize;
+}
+
+.content-navbar ul li a:hover, .theme:hover {
+    transform: translateY(-3px);
+    cursor: pointer;
+    color: var(--green);
+}
+
+/* ICON THEME */
+
+.theme{
+    display: flex;
+    color: var(--ice);
+    transition: all  0.3s ease;
+}
+
+
+
+/* HOME */
+
+
+
+
+.home{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+    flex-direction: column;
+    z-index: 1;
+
+    
+
+    
+}
+
+
+.voltar{
+    position:fixed;
+    display:flex;
+    bottom: 5rem;
+    right: 5rem;
+    background-color: transparent;
+    padding: 10px 13px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--grey);
+    transition: all 0.3s ease;
+    filter: blur(0.8px);
+    border: 0.8px;
+    border-style: dashed;
+    text-decoration: none
+
+    
+}
+
+
+.voltar:hover {
+    transform: translateY(-1rem);
+    cursor: pointer;
+    filter: none;
+}
+
+.flecha-icon {
+    display: flex;
+    transition: all 0.3s ease;
+
+}
+
+.voltar:hover .flecha-icon {
+    transform: translateY(-0.2rem);
+    font-size: 22px;
+}
+
+
+.conteudo{
+    display: flex;
+    height: 50%;
+    margin-top: 10rem;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    line-height: 70px;
+}
+
+
+
+
+.content-text{
+    display: flex;
+    flex-direction: column;;
+    color: var(--ice);
+    justify-content: center;
+    align-items: center;
+    animation: zoom 2s ease;
+    padding-bottom: 2rem;
+}
+
+
+.content-text h1{
+    display: flex;
+    font-size: 50px;
+    font-weight: 400;
+    text-decoration: none;
+
+
+}
+
+.content-text h2{
+    display: flex;
+    text-decoration: none;
+    font-size: 70px;
+    font-weight: 600;
+ 
+}
+
+
+.content-text h3{
+    display: flex;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: 1rem;
+
+}
+
+
+/* CURICULO CONTATO BTN */
+
+
+.btn-default{
+    display: flex;
+    width: 25%;
+    justify-content: space-around;
+  
+}
+
+
+.btn_default {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: var(--ice);
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid var(--ice);
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 var(--ice);
+    font-weight: 600;
+    animation: animation_social_medias 1s ease;
+
+  }
+  
+ .btn_default:hover {
+    color: var(--ice);
+    box-shadow: inset 0 -100px 0 0 var(--ice);
+    transform: translateY(-1rem);
+    color: var(--grey);
+  }
+  
+.btn_default:active {
+    transform: scale(0.9);
+  }
+
+
+/* SOCIAL MEDIA BTN */
+
+.social-medias{
+    display: flex;
+    width: 20%;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+
+.social-medias ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+
+.social-medias ul li{
+    display: flex;
+}
+
+.social-medias ul li a{
+    display: flex;
+    background-color: transparent;
+    height: 40px;
+    font-size: 1.3rem;
+    text-decoration: none;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--ice);
+    transition: all 1s ease-in-out;
+    animation: animation_social_medias 2s ease;
+
+    
+}
+
+.social-medias ul li a:hover{
+    transform:rotate(360deg);
+    color: var(--grey);
+}
+
+
+

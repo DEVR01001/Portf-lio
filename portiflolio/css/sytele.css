@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lexend:wght@100..900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url(work.css);
+@import url(skill.css);
+@import url(sobreMim.css);
+@import url(footer.css);
+@import url(home.css);
+
+
+
+.shape1{
+    width: 8px;
+    height: 130px;
+    background-color: var(--ice);
+    display: flex;
+    position: absolute;
+    z-index: 99999;
+    left: 2rem;
+    top: 1rem;
+    animation:  alternateShape 5s  ease-in-out alternate infinite ;
+    animation-fill-mode:forwards;
+    border-radius: 5px;
+
+}
+
+
+.shape2{
+    width: 8px;
+    height: 130px;
+    background-color:var(--ice);
+    display: flex;
+    position: absolute;
+    z-index: 99999;
+    right: 2rem;
+    top: 1rem;
+    animation:  alternateShape 5s  ease-in-out alternate-reverse infinite ;
+    animation-fill-mode:forwards;
+    border-radius: 5px;
+}
+:root{
+
+    --grey: #8d8d8d;
+    --ice: #fdfdfd;
+    --darkgrey: #1C1C1C;
+    --green: #d0ff00;
+
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+.body{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+
+
+
+.text-content-about #nome{
+    position: relative;
+
+}
+
+
+.text-content-about #nome::after{
+    content: "";
+    top: 0;
+    left: 0;
+    animation: teste 6s infinite; 
+    
+}
+
+
+
+
+.mobile_navbar_aberto{
+    background-color: var(--darkgrey);
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    border-radius: 5px;
+    margin: 6px 10px 0px 0px;
+
+
+}
+
+
+.mobile_navbar{
+    display: none;
+    justify-content: end;
+    padding: 10px;
+}
+.btn_abrir{
+    display: flex;
+    font-size: 30px;
+    padding-right: 2rem;
+    color: var(--green);
+}
+
+
+
+.mobile_btn_fechar{
+    display: flex;
+    width: 100%;
+    color: var(--green);
+    font-size: 30px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.list_mobile{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+}
+
+.item_mobile{
+    display: flex;
+    list-style-type: none;
+    border-radius: 5px;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.item_mobile a{
+    text-decoration: none;
+    color: var(--ice);
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.icon_mobile{
+    color: var(--ice);
+    font-size: 20px;
+}
+
+/* MEDIA QUERRIES */
+
+
+
+
+
+
+
+@media (max-width:988px) {
+    .navbar{
+        display: none;
+    }
+
+    .shape1, .shape2{
+        display: none;
+
+    }
+    .home{
+        width: 100%;
+    }
+
+    .conteudo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content-text{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-default{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .social-medias{
+        display: flex;
+        width: 100%;
+        justify-content:center;
+        align-items: center;
+    }
+    
+    .voltar{
+        position:fixed;
+        display:flex;
+        bottom: 5rem;
+        right: 3rem;
+        background-color: transparent;
+        padding: 10px 13px;
+        border-radius: 50%;
+        font-size: 20px;
+        color: var(--grey);
+        transition: all 0.3s ease;
+        filter: blur(0.8px);
+        border: 0.8px;
+        border-style: dashed;
+        text-decoration: none
+    
+        
+    }
+    .show_content{
+        display: block;
+        width: 100px;
+    }
+    
+    .mobile_navbar{
+        display: flex;
+    }
+    
+    
+}
+
+
+
+
+
+/* 
+.active_ani_paper */
+
+@keyframes paper_link {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+    20% {
+        transform: translateX(200px) rotate(20deg);
+    }
+    40%{
+        transform: translateX(500px) rotate(40deg);
+
+    }
+    60%{
+        transform: translateX(700px)  translateY(-10px) rotate(300deg);
+
+    }
+    80%{
+        transform: translateX(300px)  translateY(-200px) rotate(180deg);
+
+    }
+    100%{
+        transform: translateX(0px)   rotate(0deg);
+
+    }
+    
+}
+
+/* ANIMATION */
+
+@keyframes testeText{
+    to{
+        transform: translateX(0);
+
+    }
+    from{
+        transform: translateX(500px);
+
+    }
+
+}
+
+
+@keyframes zoom{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    50%{
+        translate: 0 0;
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+
+    }
+
+    
+
+}
+
+
+
+
+
+
+
+
+  @keyframes animation_navbar {
+    from{
+        opacity: 0;
+        transform: translateY( -300px);
+    }
+    to{
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+
+
+
+
+@keyframes animation_social_medias {
+    from{
+        opacity: 0;
+        transform: translateY( 500px);
+    }
+    to{
+        opacity: 1;
+        translate: 0 0px;
+    }
+}
+
+
+
+
+@keyframes cards{
+    0%{
+        transform: translateX(-200px);
+        opacity: 0;
+        
+    }
+    30%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+
+    }
+}
+
+
+
+@keyframes alternateShape{
+    from{
+        transform: translateY( 0px);
+    }
+    to{
+        transform: translateY( 80vh);
+    }
+}
+
+
+
+
+@keyframes teste {
+    0%{
+        content: "Olá, Eu sou Rafael Rodrigues...";
+    }
+    50%{
+        content: "Olá, Eu sou Developer..." ;
+    }
+    100%{
+        content: "Olá, Eu sou Design..." ;
+    }
+    
+}
+
+@keyframes sobreText {
+    0% {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    80%{
+        opacity: 1;
+        transform: scale(1);
+
+    }
+    90%{
+        opacity: 0;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 0;
+    }
+
+}

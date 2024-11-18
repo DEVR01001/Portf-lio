@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="sytele.css">
+    <link rel="stylesheet" href="css/sytele.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <!-- link Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+
     <title>Rafael Rodrigues dos Santos</title>
 </head>
 <body>
@@ -39,6 +46,32 @@
                     </ul>
                 </div>
             </header>
+            <div class="mobile_navbar">
+                <div id="btn_abrir" class="btn_abrir"><i class="fa-solid fa-bars"></i></div>
+            </div>
+            <div id="mobile_aberto" class="mobile_navbar_aberto">
+                <div id="btn_fechar" class="mobile_btn_fechar"><i class="fa-solid fa-x"></i></div>
+                <ul class="list_mobile">
+                    <li class="item_mobile">
+                        <i class="icon_mobile fa-solid fa-house"></i>
+                        <a href="">Home</a>
+                    </li>
+                    <li class="item_mobile">
+                        <i class="icon_mobile  fa-solid fa-list"></i>
+                        <a href="">Habilidade</a>
+                    </li>
+                    <li class="item_mobile">
+                        <i class=" icon_mobile fa-regular fa-map"></i>
+                        <a href="">Trabalhos</a>
+                    </li>
+                    <li class="item_mobile">
+                        <i class=" icon_mobile fa-solid fa-envelope"></i>
+                        <a href="">Contato</a>
+                    </li>
+                </ul>
+            </div>
+            <script src="../portiflolio/js/mobile-navbar.js"></script>
+
             <main class="conteudo">
                 <div class="content-text">
                     <h2>DEVELOPER</h2>
@@ -68,44 +101,45 @@
                     <h1>Hard Skils</h1>
                     <div class="shape"></div>
                 </div>
-            <div class="content-skils">
-                <div class="card">
+            <div class="content-skils hidden">
+                <div class="card hidden">
                     <div class="icon-img">
                         <img src="src/html.png" alt="">
                     </div>
                     <span class="text-card">HTML5</span>
                 </div>
-                <div class="card">
+                <div class="card hidden">
                     <div class="icon-img">
                         <img src="src/text.png" alt="">
                     </div>
                     <span class="text-card">CSS</span>
                 </div>
-                <div class="card">
+                <div class="card hidden">
                     <div class="icon-img">
                         <img src="src/js.png" alt="">
                     </div>
                     <span class="text-card">JAVASCRIPT</span>
                 </div>
-                <div class="card">
+                <div class="card hidden">
                     <div class="icon-img">
                         <img src="src/php.png" alt="">
                     </div>
                     <span class="text-card">PHP</span>
                 </div>
-                <div class="card">
+                <div class="card hidden">
                     <div class="icon-img">
                         <img src="src/programing.png" alt="">
                     </div>
                     <span class="text-card">MYSQ</span>
                 </div>
-                <div class="card">
+                <div class="card hidden">
                     <div class="icon-img">
                         <img src="src/python.png" alt="">
                     </div>
                     <span class="text-card">PYTHON</span>
                 </div>
             </div>
+            <script src="../portiflolio/js/animacao.js"></script>
 
         </section>
         <section class="works">
@@ -113,6 +147,106 @@
                 <h1>WORKS</h1>
                 <div class="shape"></div>
             </div>
+            <div class="btn_work">
+                <div class="btn_prev_work"><i class="fa-solid fa-chevron-left"></i></div>
+                <div class="btn_next_work"><i class="fa-solid fa-chevron-right"></i></div>
+            </div>
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="card_work">
+                        <div class="img_content_card">
+                            <img class="img_content" src="../portiflolio/src/img1.jfif" alt="">
+                            <div class="btn_content_card">
+                                <div class="btn_preview">Preview</div>
+                                <div class="btn_git">Github</div>
+                            </div>
+                        </div>
+                        <div class="text_card">
+                            <p class="nome_progeto">Calculadora IMC</p>
+                            <div class="linguagens">
+                                <div class="item-lin">PHP</div>
+                                <div class="item-lin">JS</div>
+                                <div class="item-lin">HTML5</div>
+                                <div class="item-lin">CSS</div>
+                            </div>
+                            <div class="descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur et nisi architecto, itaque officia dolores quam, cum at, natus nihil in ab quae labore obcaecati aliquid rem dolore explicabo dicta.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card_work">
+                        <div class="img_content_card">
+                            <img src="../portiflolio/src/img2.jfif" alt="">
+                        </div>
+                        <div class="text_card">
+                            <p class="nome_progeto">Calculadora IMC</p>
+                            <div class="linguagens">
+                                <div class="item-lin">PHP</div>
+                                <div class="item-lin">JS</div>
+                                <div class="item-lin">HTML5</div>
+                                <div class="item-lin">CSS</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card_work">
+                        <div class="img_content_card">
+                            <img src="../portiflolio/src/img2.jfif" alt="">
+                        </div>
+                        <div class="text_card">
+                            <p class="nome_progeto">Calculadora IMC</p>
+                            <div class="linguagens">
+                                <div class="item-lin">PHP</div>
+                                <div class="item-lin">JS</div>
+                                <div class="item-lin">HTML5</div>
+                                <div class="item-lin">CSS</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card_work">
+                        <div class="img_content_card">
+                            <img src="../portiflolio/src/img4.jfif" alt="">
+                        </div>
+                        <div class="text_card">
+                            <p class="nome_progeto">Calculadora IMC</p>
+                            <div class="linguagens">
+                                <div class="item-lin">PHP</div>
+                                <div class="item-lin">JS</div>
+                                <div class="item-lin">HTML5</div>
+                                <div class="item-lin">CSS</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card_work">
+                        <div class="img_content_card">
+                            <img src="../portiflolio/src/img5.jfif" alt="">
+                        </div>
+                        <div class="text_card">
+                            <p class="nome_progeto">Calculadora IMC</p>
+                            <div class="linguagens">
+                                <div class="item-lin">PHP</div>
+                                <div class="item-lin">JS</div>
+                                <div class="item-lin">HTML5</div>
+                                <div class="item-lin">CSS</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
         </section>
         <section class="sobre-mim">
             <div class="text-sobre Text-skils">
@@ -170,5 +304,10 @@
 
             
         </footer>
+
+           <!-- script Swiper -->
+           <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+           <script src="../portiflolio/js/swiper.js"></script>
+
 </body>
 </html>
