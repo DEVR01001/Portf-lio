@@ -17,7 +17,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 5rem;
 }
 
 
@@ -27,7 +27,7 @@
     width: 100%;
     flex-direction: column;
     align-items: center;
-    row-gap: 4rem;
+    row-gap: 8rem;
 }
 
 
@@ -46,18 +46,30 @@
     display: flex;
     width: 440px;
     height: 350px;
-    background-color: #cac8e6;
+    background-color: #d6caca;
     justify-content: center;
     align-items: center;
-
+    flex-direction: column;
+    border-radius: 3px;
+    animation: card_work 1s ease;
+    animation-timeline: view();
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
 }
 
 
 .img_content_work img{
-    height: 50px;
-
+    height: 300px;
+    z-index: 5;
+    animation: img_work 1s ease-in-out;
+    animation-timeline: view();
 }
 
+
+.work_card_content .img1 img{
+    height: 200px;
+    animation: img_work 1s ease-in-out;
+    animation-timeline: view();
+}
 
 .conteudo_work{
     display: flex;
@@ -71,7 +83,9 @@
     display: flex;
     font-size: 14px;
     font-weight: 400;
-    color: #d0ff00;
+    color: var(--green);
+    animation: text_work 0.5s ease-in-out;
+    animation-timeline: view();
 
 }
 
@@ -81,6 +95,9 @@
     color: var(--ice);
     font-weight: 500;
     padding-bottom:1.5rem;
+    animation: text_work 0.5s ease-in-out;
+    animation-timeline: view();
+    
 }
 
 
@@ -94,13 +111,15 @@
     max-width: 500px;
     flex-direction: column;
     gap: 2rem;
+    animation: text_work 0.5s ease-in-out;
+    animation-timeline: view();
 
 }
 
 
 .btn_content_work{
     display: flex;
-    background-color: #0f0f0f;
+    background-color: rgb(50, 50, 50);
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -127,3 +146,62 @@
     transform: rotate(45deg);
     font-weight: 100px;
 }
+
+
+
+@keyframes text_work{
+    0%{
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    40%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    80%{
+        transform: translateX(0px);
+        opacity: 1;
+
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes card_work{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 0.5;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+
+
+@keyframes img_work{
+    0%{
+        transform: scale(0.5);
+    }
+    50%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
