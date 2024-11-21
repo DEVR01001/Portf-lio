@@ -1,12 +1,4 @@
 
-:root{
-
-    --grey: #8d8d8d;
-    --ice: #fdfdfd;
-    --darkgrey: #1C1C1C;
-    --green: #ff0000;
-
-}
 /* FOOTER */
 
 
@@ -14,7 +6,7 @@ footer{
     display:flex;
     width: 100%;
     height: 80vh;
-    background-color: var(--ice);
+    background-color: var(--corbase2);
     justify-content: center;
     align-items: center;
     position:relative;
@@ -29,14 +21,14 @@ footer{
     align-items: center;
     flex-direction: column;
     row-gap: 100px;
-    background: linear-gradient(to bottom, var(--ice) 30%,#1c1c1c23 100%);
+    background: linear-gradient(to bottom, var(--corbase2) 30%, var(--cor-overlay) 100%);
 }
 
 .text_footer{
     display: flex;
     font-weight: 600;
     font-size: 30px;
-    color: var(--darkgrey);
+    color: var(--corbase);
     flex-direction: column;
     justify-content: center;
     align-items:center;
@@ -64,7 +56,7 @@ footer{
     border: none;
     outline: none;
     padding-left: 2rem;
-    color: #2b2b2b;
+    color: var(--neutro2);
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     z-index: 5;
     font-size: 18px;
@@ -78,8 +70,8 @@ footer{
     align-items: center;
     padding: 13px;
     border-radius: 5px;
-    background-color: var(--green);
-    color: var(--ice);
+    background-color: var(--cordetalhes);
+    color: var(--cortexto2);
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
@@ -124,12 +116,12 @@ footer{
 
 
 .social_footer .social-medias ul li a {
-    color:var(--grey);
+    color:var(--neutro);
     font-size: 20px;
 }
 
 .social_footer .social-medias ul li a:hover{
-    color: var(--darkgrey);
+    color: var(--corbase);
 }
 
 
@@ -137,7 +129,7 @@ footer{
     display: flex;
     width: 70%;
     height: 1px;
-    background-color: #b8b8b8;
+    background-color: var(--neutro);
     border-radius: 5px;
 }
 

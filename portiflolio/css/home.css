@@ -1,4 +1,5 @@
 
+
 /* Video Background */
 .video_body{
     position: fixed;
@@ -44,6 +45,7 @@
     align-items: center;
     width: 100%;
     height: 100%;
+
     
     
 
@@ -67,27 +69,40 @@
     display: flex;
     text-decoration: none;
     font-size: 0.8rem;
-    color: var(--ice);
+    color: var(--cortexto);
     font-weight: 500;
     transition: all  0.3s ease;
     text-transform:capitalize;
+    font-weight: 400;
 }
 
 .content-navbar ul li a:hover, .theme:hover {
     transform: translateY(-3px);
     cursor: pointer;
-    color: var(--green);
+    color: var(--cordetalhes);
+    font-weight: 500;
 }
 
 /* ICON THEME */
 
 .theme{
     display: flex;
-    color: var(--ice);
+    color: var(--cortexto);
     transition: all  0.3s ease;
 }
 
+#icon_theme i:last-child{
+    display: none;
 
+}
+
+
+.lightmode #icon_theme i:first-child{
+    display: none;
+}
+.lightmode #icon_theme i:last-child{
+    display: block;
+}
 
 /* HOME */
 
@@ -114,12 +129,13 @@
     padding: 10px 13px;
     border-radius: 50%;
     font-size: 20px;
-    color: var(--grey);
+    color: var(--neutro);
     transition: all 0.3s ease;
     filter: blur(0.8px);
     border: 0.8px;
     border-style: dashed;
-    text-decoration: none
+    text-decoration: none;
+
 
     
 }
@@ -160,7 +176,7 @@
 .content-text{
     display: flex;
     flex-direction: column;;
-    color: var(--ice);
+    color: var(--cortexto);
     justify-content: center;
     align-items: center;
     animation: zoom 1s ease-in-out;
@@ -216,23 +232,24 @@
     font-size: 15px;
     letter-spacing: 1px;
     text-decoration: none;
-    color: var(--ice);
+    color: var(--cortexto);
     background: transparent;
     cursor: pointer;
     transition: ease-out 0.5s;
-    border: 2px solid var(--ice);
+    border: 2px solid var(--cortexto);
     border-radius: 10px;
-    box-shadow: inset 0 0 0 0 var(--ice);
+    box-shadow: inset 0 0 0 0 var(--cortexto);
     font-weight: 600;
     animation: animation_social_medias 1s ease;
+
 
   }
   
  .btn_default:hover {
-    color: var(--ice);
-    box-shadow: inset 0 -100px 0 0 var(--ice);
+    color: var(--cortexto);
+    box-shadow: inset 0 -100px 0 0 var(--cortexto);
     transform: translateY(-1rem);
-    color: var(--grey);
+    color: var(--corneutro2);
   }
   
 .btn_default:active {
@@ -271,7 +288,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    color: var(--ice);
+    color: var(--cortexto);
     transition: all 1s ease-in-out;
     animation: animation_social_medias 2s ease;
 
@@ -280,6 +297,6 @@
 
 .social-medias ul li a:hover{
     transform:rotate(360deg);
-    color: var(--grey);
+    color: var(--neutro);
 }
 
