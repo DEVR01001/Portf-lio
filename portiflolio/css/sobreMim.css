@@ -92,16 +92,15 @@
     width: 50%;
     height: 100%;
     position: relative;
-    
+    justify-content: center;
+    align-items: center;
 }
 
-.img-about img{
-    display: flex;
-    position: absolute;
-    height: 800px;
-    top: 0;
-    left: 0;
-    
+.img-about img {
+  max-width: 100%; 
+  max-height: 100%; 
+  object-fit:contain; 
+  z-index: 0; 
 
 }
 

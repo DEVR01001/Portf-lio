@@ -121,6 +121,7 @@
     transition: 0.3s ease-in-out;
     border-radius: 5px;
     margin: 6px 10px 0px 0px;
+    
 
 
 }
@@ -289,11 +290,18 @@
     .Text-skils{
         font-size: 22px;
     }
+
+    
     
 }
 
 
 @media (max-width: 768px) {
+
+    .img-about img{
+        max-width: 80%; 
+        max-height: 80%;
+    }
     .content-text h1{
         font-size: 40px;
 
@@ -348,13 +356,34 @@
     .img_content_work{
         width: 500px;
         height: 260px;
+        animation: img_worl_mobile 1s ease;
+        animation-timeline: view();
     }
     .img_content_work img{
         height: 180px;
+        animation: none;
     }
     .work_card_content .img1 img{
         height: 120px;
     }
+
+
+    
+@keyframes img_worl_mobile{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    30%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
 
 
     .type_project{
@@ -408,10 +437,37 @@
         font-size: 15px;
     }
 
+    @keyframes img_work{
+        0%{
+            transform: scale(0.5);
+        }
+        30%{
+            transform: scale(1);
+            opacity: 1;
+        }
+        80%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+    
+
 }
 
 
 @media (max-width: 576px) {
+
+    .img-about{
+        height: 50%;
+    }
+    .img-about img{
+        max-width: 100%; 
+        max-height: 100%; 
+
+        
+    }
     .Text-skils{
         font-size: 17px;
     }
@@ -541,6 +597,7 @@
 
 
     }
+    
 
     .sobre-mim{
         height: 90vh;
@@ -688,6 +745,7 @@
     }
 
 }
+
 
 
 @keyframes zoom{
