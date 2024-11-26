@@ -94,14 +94,17 @@
     position: relative;
     justify-content: center;
     align-items: center;
+    border-radius: 50%;
 }
 
 .img-about img {
-  max-width: 100%; 
-  max-height: 100%; 
+  max-width: 80%; 
+  max-height: 80%; 
   object-fit:contain; 
   z-index: 0; 
-
+  transform: rotate(-30deg);
+  background-color:   var(  --corbase);
+  border-radius: 100px 100px 100px 200px;
 }
 
 
@@ -143,7 +146,7 @@
     padding-bottom: 1rem;
     width: 60%;
     font-weight: 300;
-    color:var(--cortexto);
+    color:var(--corbase);
     text-align: justify;
     animation:  sobreText 0.2s ease;
     animation-timeline: view();

@@ -21,9 +21,12 @@ $(document).ready(function () {
     $("html").niceScroll();
 });
 
-// For window
+// Scroll para o topo
 window.scrollTo({
     left: x,
     top: y,
     behavior: 'smooth'
 });
+
+
+
